@@ -1,0 +1,138 @@
+:root {
+    --color-fondo: #000000; /* Fondo oscuro para resaltar los neones */
+    --color-principal: #000000; /* Vino neón */
+    --color-secundario: #8a0707; /* Morado neón */
+    --color-acento: #00eeff; /* Rosa neón */
+    --color-texto: #ffffff; /* Blanco para el texto */
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0 0 10px var(--color-principal), 0 0 20px var(--color-principal);
+}
+
+/* Navegación */
+nav {
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: var(--color-texto);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    text-shadow: 0 0 5px var(--color-acento), 0 0 10px var(--color-acento);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--color-principal);
+    text-shadow: 0 0 15px var(--color-principal), 0 0 30px var(--color-principal);
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+
+/* Galería */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--color-acento);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--color-acento), 0 0 50px var(--color-acento);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    text-align: center;
+    padding: 10px;
+    text-shadow: 0 0 10px var(--color-principal), 0 0 20px var(--color-principal);
+}
+
+.imagen-centrada {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carrusel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .diapositivas {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .diapositiva img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  

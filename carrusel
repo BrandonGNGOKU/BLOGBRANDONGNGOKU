@@ -1,0 +1,25 @@
+const carrusel = document.querySelector('.carrusel');
+const diapositivas = carrusel.querySelector('.diapositivas');
+const totalDiapositivas = diapositivas.children.length;
+let indiceActual = 0;
+
+function actualizarCarrusel() {
+  const ancho = carrusel.offsetWidth;
+  diapositivas.style.transform = `translateX(-${indiceActual * ancho}px)`;
+}
+
+document.querySelector('.prev').addEventListener('click', () => {
+  indiceActual = (indiceActual - 1 + totalDiapositivas) % totalDiapositivas;
+  actualizarCarrusel();
+});
+
+document.querySelector('.next').addEventListener('click', () => {
+  indiceActual = (indiceActual + 1) % totalDiapositivas;
+  actualizarCarrusel();
+});
+
+// Ajustar el carrusel al cambiar el tamaño de la ventana
+window.addEventListener('resize', actualizarCarrusel);
+
+// Inicializar el carrusel
+actualizarCarrusel();
